@@ -41,4 +41,29 @@ export class UserController {
 
     res.status(200).send({ user: newData });
   }
+
+  editUser(req: Request, res: Response) {
+    const { id } = req.params;
+    const users: IUser[] = JSON.parse(
+      fs.readFileSync("./db/user.json", "utf-8")
+    );
+    const idx: number = users.findIndex((item) => item.id === +id);
+    users[idx] = { ...users[idx], ...req.body };
+
+    fs.writeFileSync("./db/user.json", JSON.stringify(users), "utf-8");
+
+    res.status(200).send("edit succesfully!");
+  }
+
+  deleteUser(req: Request, res: Response) {
+    const { id } = req.params;
+    const users: IUser[] = JSON.parse(
+      fs.readFileSync("./db/user.json", "utf-8")
+    );
+    const newUsers = users.filter((item) => item.id != +id);
+
+    fs.writeFileSync("./db/user.json", JSON.stringify(newUsers), "utf-8");
+
+    res.status(200).send("Delete Succesfully!");
+  }
 }
