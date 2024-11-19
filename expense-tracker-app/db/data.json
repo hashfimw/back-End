@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Groceries",
+    "nominal": 50000,
+    "type": "expense",
+    "category": "food",
+    "date": "2024-11-15"
+  },
+  {
+    "id": 2,
+    "title": "Monthly Salary",
+    "nominal": 5000000,
+    "type": "income",
+    "category": "salary",
+    "date": "2024-11-01"
+  },
+  {
+    "id": 3,
+    "title": "Bus Ticket",
+    "nominal": 15000,
+    "type": "expense",
+    "category": "transport",
+    "date": "2024-11-16"
+  },
+  {
+    "id": 4,
+    "title": "Dinner Out",
+    "nominal": 80000,
+    "type": "expense",
+    "category": "food",
+    "date": "2024-11-17"
+  },
+  {
+    "id": 5,
+    "title": "Freelance Project",
+    "nominal": 1000000,
+    "type": "income",
+    "category": "salary",
+    "date": "2024-11-10"
+  },
+  {
+    "id": 6,
+    "title": "Batagor",
+    "nominal": 50000,
+    "type": "expense",
+    "category": "food",
+    "date": "2024-11-14"
+  }
+]

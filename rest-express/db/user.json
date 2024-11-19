@@ -1,1 +1,9 @@
-[{"id":2,"name":"Budi","email":"andi@gmail.com","password":"Asd1234"},{"id":3,"name":"mumun","email":"momor@gmail.com","password":"3april1998"}]
+[
+  { "id": 2, "name": "Budi", "email": "andi@gmail.com", "password": "Asd1234" },
+  {
+    "id": 3,
+    "name": "mumun",
+    "email": "momor@gmail.com",
+    "password": "3april1998"
+  }
+]
