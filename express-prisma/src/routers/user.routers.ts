@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../controllers/user.controllers";
+import { verifyToken } from "../middlewares/verify";
 
 export class UserRouter {
   private userController: UserController;
@@ -11,9 +12,10 @@ export class UserRouter {
     this.initializeRoutes();
   }
   private initializeRoutes() {
-    this.router.get("/", this.userController.getUsers);
+    this.router.get("/", verifyToken, this.userController.getUsers);
+    this.router.get("/profile", verifyToken, this.userController.getUsersId);
     this.router.post("/", this.userController.createUser);
-    this.router.get("/:id", this.userController.getUsersId);
+
     this.router.patch("/:id", this.userController.editUser);
     this.router.delete("/:id", this.userController.deleteUser);
   }
